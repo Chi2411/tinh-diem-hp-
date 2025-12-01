@@ -36,13 +36,11 @@ function tinhDiem() {
         return;
     }
 
-
-    // ====== TÍNH QT GỐC =======
+    // ====== TÍNH QT GỐC ======
     let famiScore = (fami / 10) * 2;
     let gkScore = gk * 0.2;
 
     let qtRaw = cc + tc + famiScore + gkScore;
-
 
     // ====== LÀM TRÒN QT THEO .0 / .5 ======
     let intPart = Math.floor(qtRaw);
@@ -57,15 +55,19 @@ function tinhDiem() {
         qtRounded = intPart + 1;
     }
 
-    // ====== HIỂN THỊ QT DẠNG 7.2 (làm tròn xuống 7.0) ======
-    document.getElementById("qt").innerText =
-        qtRaw.toFixed(1) + " (làm tròn " +
-        (qtRounded > qtRaw ? "lên " : "xuống ") +
-        qtRounded + ")";
+    // ====== HIỂN THỊ QT ======
+    if (qtRaw % 1 === 0) {
+        // QT là số .0 → không cần ghi "làm tròn"
+        document.getElementById("qt").innerText = qtRaw.toFixed(1);
+    } else {
+        // QT có số lẻ → ghi rõ cách làm tròn
+        document.getElementById("qt").innerText =
+            qtRaw.toFixed(1) + " (làm tròn " +
+            (qtRounded > qtRaw ? "lên " : "xuống ") +
+            qtRounded + ")";
+    }
 
-    // Sử dụng qtRounded cho các tính toán tiếp theo
     let qt = qtRounded;
-
 
     // ====== XỬ LÝ NẾU QT HOẶC CK < 4 ======
     if (qt < 4 || ck < 4) {
