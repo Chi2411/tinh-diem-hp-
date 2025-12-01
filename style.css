@@ -8,16 +8,20 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/* Khung chính */
+/* Khung chính – responsive cho mobile */
 .container {
-    width: 380px;
+    width: 380px;          /* đẹp trên PC */
+    max-width: 100%;       /* tự co giãn trên điện thoại */
     background: #fff;
     padding: 20px;
     border-radius: 16px;
     border: 1.5px solid #e5dcff;
     box-shadow: 0 4px 10px rgba(120, 100, 160, 0.15);
+    margin: 0 auto;        /* luôn căn giữa */
 }
 
 /* Tiêu đề */
@@ -47,7 +51,6 @@ input {
     background: #faf8ff;
     margin-top: 4px;
 
-    /* CHỮ ĐẬM HƠN */
     font-weight: 600;
     font-size: 14.5px;
 
@@ -101,4 +104,17 @@ button:hover {
     font-weight: 700;
     font-size: 18px;
     color: #6b5b95;
+}
+
+/* Tối ưu thêm cho màn nhỏ hơn 350px (iPhone SE cũ) */
+@media (max-width: 360px) {
+    h2 {
+        font-size: 20px;
+    }
+    input {
+        font-size: 13.5px;
+    }
+    button {
+        font-size: 15px;
+    }
 }
