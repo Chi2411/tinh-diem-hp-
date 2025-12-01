@@ -5,6 +5,12 @@ function tinhDiem() {
     let gk = Number(document.getElementById("gk").value);
     let ck = Number(document.getElementById("ck").value);
 
+    // Kiểm tra tất cả phải là số
+    if (isNaN(cc) || isNaN(tc) || isNaN(fami) || isNaN(gk) || isNaN(ck)) {
+        alert("Tất cả các ô nhập phải là số!");
+        return;
+    }
+
     if (![ -2, -1, 0, 1 ].includes(cc)) {
         alert("Điểm chuyên cần phải là -2, -1, 0 hoặc 1");
         return;
@@ -34,7 +40,18 @@ function tinhDiem() {
     let gkScore = gk * 0.2;
 
     let qt = cc + tc + famiScore + gkScore;
-    qt = Math.round(qt * 100) / 100;
+
+    // Làm tròn qt theo .0 hoặc .5
+    let intPart = Math.floor(qt);
+    let decimal = qt - intPart;
+
+    if (decimal < 0.25) {
+        qt = intPart;
+    } else if (decimal < 0.75) {
+        qt = intPart + 0.5;
+    } else {
+        qt = intPart + 1;
+    }
 
     if (qt < 4 || ck < 4) {
         document.getElementById("qt").innerText = qt;
