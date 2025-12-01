@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Căn giữa toàn bộ */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f4ff;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* Khung chính */
+.container {
+    width: 380px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1.5px solid #e5dcff;
+    box-shadow: 0 4px 10px rgba(120, 100, 160, 0.15);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6b5b95;
+    margin-bottom: 18px;
+}
+
+/* Label */
+.form label {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5b5676;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1.6px solid #d8d1f1;
+    background: #faf8ff;
+    margin-top: 4px;
+
+    /* CHỮ ĐẬM HƠN */
+    font-weight: 600;
+    font-size: 14.5px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #a894ff;
+    background: #f3f0ff;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 11px;
+    border-radius: 10px;
+    margin-top: 16px;
+    background: #a894ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #9278ff;
+}
+
+/* Khung kết quả */
+#kq {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1.5px solid #e5dcff;
+    box-shadow: 0 2px 6px rgba(120, 100, 160, 0.08);
+}
+
+/* Dòng kết quả */
+#kq p {
+    margin: 6px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Điểm chữ nổi bật */
+#dc {
+    font-weight: 700;
+    font-size: 18px;
+    color: #6b5b95;
+}

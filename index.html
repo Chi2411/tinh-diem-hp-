@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm học phần FaMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Tính điểm học phần FaMI</h2>
+
+    <div class="form">
+        <label>Điểm chuyên cần (-2, -1, 0, 1)</label>
+        <input id="cc" type="number" step="1">
+
+        <label>Điểm tích cực (0, 0.5, 1)</label>
+        <input id="tc" type="number" step="0.5">
+
+        <label>Số bài Đglt đạt (0 - 10)</label>
+        <input id="fami" type="number" step="1">
+
+        <label>Điểm giữa kỳ (0, 2, 4, ..., 30)</label>
+        <input id="gk" type="number" step="2">
+
+        <label>Điểm cuối kỳ (0.0 - 10.0, chỉ .0 hoặc .5)</label>
+        <input id="ck" type="number" step="0.5">
+
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+
+    <div id="kq">
+        <p>Điểm quá trình: <span id="qt">—</span></p>
+        <p>Điểm cuối kỳ: <span id="ck_out">—</span></p>
+        <p>Điểm học phần: <span id="hp">—</span></p>
+        <p>Điểm chữ: <span id="dc">—</span></p>
+        <p>Điểm hệ 4: <span id="h4">—</span></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
