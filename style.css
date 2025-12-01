@@ -7,35 +7,32 @@ body {
     color: #444;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px 10px;
 }
 
-/* Khung chính – responsive cho mobile */
+/* Khung chính – responsive */
 .container {
-    width: 380px;          /* đẹp trên PC */
-    max-width: 100%;       /* tự co giãn trên điện thoại */
+    width: 100%;
+    max-width: 400px;        /* Giới hạn tối đa */
     background: #fff;
-    padding: 20px;
+    padding: 18px;
     border-radius: 16px;
     border: 1.5px solid #e5dcff;
     box-shadow: 0 4px 10px rgba(120, 100, 160, 0.15);
-    margin: 0 auto;        /* luôn căn giữa */
 }
 
 /* Tiêu đề */
 h2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #6b5b95;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 /* Label */
 .form label {
-    margin-top: 10px;
+    margin-top: 8px;
     display: block;
     font-size: 14px;
     font-weight: 600;
@@ -45,15 +42,13 @@ h2 {
 /* Input */
 input {
     width: 100%;
-    padding: 10px;
+    padding: 9px;
     border-radius: 10px;
     border: 1.6px solid #d8d1f1;
     background: #faf8ff;
     margin-top: 4px;
-
     font-weight: 600;
-    font-size: 14.5px;
-
+    font-size: 14px;
     transition: 0.2s;
 }
 
@@ -66,13 +61,13 @@ input:focus {
 /* Button */
 button {
     width: 100%;
-    padding: 11px;
+    padding: 10px;
     border-radius: 10px;
-    margin-top: 16px;
+    margin-top: 14px;
     background: #a894ff;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s;
@@ -84,8 +79,8 @@ button:hover {
 
 /* Khung kết quả */
 #kq {
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 16px;
+    padding: 12px;
     border-radius: 12px;
     background: #ffffff;
     border: 1.5px solid #e5dcff;
@@ -94,8 +89,8 @@ button:hover {
 
 /* Dòng kết quả */
 #kq p {
-    margin: 6px 0;
-    font-size: 15px;
+    margin: 5px 0;
+    font-size: 14.5px;
     font-weight: 500;
 }
 
@@ -106,15 +101,23 @@ button:hover {
     color: #6b5b95;
 }
 
-/* Tối ưu thêm cho màn nhỏ hơn 350px (iPhone SE cũ) */
-@media (max-width: 360px) {
+/* MOBILE TỐI ƯU */
+@media (max-width: 480px) {
+    body {
+        padding-top: 10px;
+    }
+
+    .container {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
     h2 {
         font-size: 20px;
     }
-    input {
-        font-size: 13.5px;
-    }
+
     button {
-        font-size: 15px;
+        font-size: 14.5px;
+        padding: 9px;
     }
 }
