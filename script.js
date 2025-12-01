@@ -22,7 +22,7 @@ function tinhDiem() {
     }
 
     if (fami < 0 || fami > 10) {
-        alert("Số bài Fami phải từ 0 đến 10");
+        alert("Số bài Đglt đạt phải từ 0 đến 10");
         return;
     }
 
@@ -100,3 +100,4 @@ function tinhDiem() {
     document.getElementById("dc").innerText = diemChu;
     document.getElementById("h4").innerText = diem4;
 }
+
