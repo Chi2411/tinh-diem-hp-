@@ -36,25 +36,39 @@ function tinhDiem() {
         return;
     }
 
+
+    // ====== TÍNH QT GỐC =======
     let famiScore = (fami / 10) * 2;
     let gkScore = gk * 0.2;
 
-    let qt = cc + tc + famiScore + gkScore;
+    let qtRaw = cc + tc + famiScore + gkScore;
 
-    // Làm tròn qt theo .0 hoặc .5
-    let intPart = Math.floor(qt);
-    let decimal = qt - intPart;
 
+    // ====== LÀM TRÒN QT THEO .0 / .5 ======
+    let intPart = Math.floor(qtRaw);
+    let decimal = qtRaw - intPart;
+
+    let qtRounded;
     if (decimal < 0.25) {
-        qt = intPart;
+        qtRounded = intPart;
     } else if (decimal < 0.75) {
-        qt = intPart + 0.5;
+        qtRounded = intPart + 0.5;
     } else {
-        qt = intPart + 1;
+        qtRounded = intPart + 1;
     }
 
+    // ====== HIỂN THỊ QT DẠNG 7.2 (làm tròn xuống 7.0) ======
+    document.getElementById("qt").innerText =
+        qtRaw.toFixed(1) + " (làm tròn " +
+        (qtRounded > qtRaw ? "lên " : "xuống ") +
+        qtRounded + ")";
+
+    // Sử dụng qtRounded cho các tính toán tiếp theo
+    let qt = qtRounded;
+
+
+    // ====== XỬ LÝ NẾU QT HOẶC CK < 4 ======
     if (qt < 4 || ck < 4) {
-        document.getElementById("qt").innerText = qt;
         document.getElementById("ck_out").innerText = ck;
         document.getElementById("hp").innerText = "F";
         document.getElementById("dc").innerText = "F";
@@ -62,6 +76,7 @@ function tinhDiem() {
         return;
     }
 
+    // ====== TÍNH ĐIỂM HỌC PHẦN ======
     let hp = (qt + ck) / 2;
     hp = Math.round(hp * 10) / 10;
 
@@ -78,7 +93,6 @@ function tinhDiem() {
     else if (hp < 9.5) { diemChu = "A"; diem4 = 4; }
     else { diemChu = "A+"; diem4 = 4; }
 
-    document.getElementById("qt").innerText = qt;
     document.getElementById("ck_out").innerText = ck;
     document.getElementById("hp").innerText = hp;
     document.getElementById("dc").innerText = diemChu;
