@@ -13,9 +13,9 @@ body {
 /* Khung chính – responsive */
 .container {
     width: 100%;
-    max-width: 400px;        /* Giới hạn tối đa */
+    max-width: 380px;       /* Giảm nhẹ để gọn hơn */
     background: #fff;
-    padding: 18px;
+    padding: 16px;          /* Giảm padding */
     border-radius: 16px;
     border: 1.5px solid #e5dcff;
     box-shadow: 0 4px 10px rgba(120, 100, 160, 0.15);
@@ -24,31 +24,32 @@ body {
 /* Tiêu đề */
 h2 {
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;        /* Thu nhỏ */
     font-weight: 700;
     color: #6b5b95;
-    margin-bottom: 14px;
+    margin-bottom: 12px;    /* Gọn hơn */
 }
 
-/* Label */
+/* Label (CHỈNH GỌN) */
 .form label {
-    margin-top: 8px;
+    margin-top: 6px;        /* Giảm spacing */
     display: block;
-    font-size: 14px;
+    font-size: 13px;        /* Nhỏ lại */
     font-weight: 600;
     color: #5b5676;
 }
 
-/* Input */
+/* Input (CHỈNH GỌN) */
 input {
     width: 100%;
-    padding: 9px;
-    border-radius: 10px;
-    border: 1.6px solid #d8d1f1;
+    padding: 7px 9px;       /* Nhỏ hơn */
+    border-radius: 8px;     /* Bo ít lại để gọn hơn */
+    border: 1.4px solid #d8d1f1;
     background: #faf8ff;
-    margin-top: 4px;
+    margin-top: 3px;
+    margin-bottom: 4px;     /* Khoảng cách gọn lại */
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13.5px;
     transition: 0.2s;
 }
 
@@ -61,13 +62,13 @@ input:focus {
 /* Button */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 9px;           /* Gọn hơn 1 chút */
     border-radius: 10px;
-    margin-top: 14px;
+    margin-top: 10px;
     background: #a894ff;
     border: none;
     color: white;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s;
@@ -79,8 +80,8 @@ button:hover {
 
 /* Khung kết quả */
 #kq {
-    margin-top: 16px;
-    padding: 12px;
+    margin-top: 14px;
+    padding: 10px;          /* Thu nhỏ padding */
     border-radius: 12px;
     background: #ffffff;
     border: 1.5px solid #e5dcff;
@@ -89,8 +90,8 @@ button:hover {
 
 /* Dòng kết quả */
 #kq p {
-    margin: 5px 0;
-    font-size: 14.5px;
+    margin: 4px 0;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -108,16 +109,16 @@ button:hover {
     }
 
     .container {
-        padding: 14px;
+        padding: 12px;
         border-radius: 14px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     button {
-        font-size: 14.5px;
-        padding: 9px;
+        font-size: 14px;
+        padding: 8px;
     }
 }
